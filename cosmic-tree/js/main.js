@@ -20,7 +20,3 @@ function getDate() {
     })
     .catch(error => console.error('Error fetching data:', error));
 }
-
-
-
-EYNzzaJQRLs9LCZkxomYTK4knCetnwwDdPw5h7aL 
