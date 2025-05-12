@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NASA Peek of the Day</title>
+
+  <!-- Orbitron Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body>
+  <h1>Check out NASA's Picture of the Day</h1>
+  
+  <!-- Input type with Flatpickr -->
+  <div class="date-box">
+	<input type="text" id="customDate" placeholder="Select a date">
+	<button type="button">go</button>
+  </div>
+
+  <h2 class="event"></h2>
+  <img src="" alt="">
+  <h3></h3>
+
+  <!-- Flatpickr -->
+  <script>
+    flatpickr("#customDate", {
+      dateFormat: "Y-m-d",
+      allowInput: true
+    });
+  </script>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

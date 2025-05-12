@@ -1,0 +1,121 @@
+/* Background and basic layout */
+body {
+  background: url('https://media.giphy.com/media/l3q2vZRhaKujVZXu8/giphy.gif') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin: 0.5em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Global: Set the default cursor to the normal arrow (default) */
+* {
+  cursor: default !important; /* Override cursor for all elements */
+}
+
+/* Flatpickr input and buttons */
+#customDate,
+button {
+  padding: 0.6em 1em;
+  margin: 1em 0.5em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Orbitron', sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  text-align: center; /* Center placeholder and input text */
+  height: 2.5em;
+}
+
+/* Container for input and button */
+.date-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  margin: 1em auto;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  width: fit-content;
+}
+
+/* Adjust input and button width inside box */
+.date-box input,
+.date-box button {
+  width: 250px;
+  max-width: 90vw;
+}
+
+/* Remove hover cursor for button */
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  cursor: default; /* Keep default cursor even on button hover */
+}
+
+/* Flatpickr customization */
+.flatpickr-calendar {
+  font-family: 'Orbitron', sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+/* Hide native calendar icon (chrome, safari) */
+#customDate::-webkit-calendar-picker-indicator {
+  display: none; /* Hide the calendar icon */
+}
+
+/* Remove the hand cursor from date picker */
+#customDate {
+  cursor: default !important; /* Ensure default cursor for date picker */
+}
+
+/* Image styling */
+img {
+  width: 60%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-top: 1em;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  img {
+    width: 90%;
+  }
+
+  #customDate,
+  button {
+    width: 90%;
+    margin: 0.5em 0;
+  }
+}
+
